@@ -1,9 +1,8 @@
 import React from "react";
-import { Navbar, Container, Button, Row, Col } from "react-bootstrap";
-import { _createCookie, _readCookie, _eraseCookie } from "./Network";
-import { users } from "../users";
+import { _eraseCookie } from "./Network";
+import {users } from "../users";
 import "../styles/Navbar.css";
-
+// eslint-disable-next-line 
 const Navigation = () => {
   const signout = () => {
     _eraseCookie("token");

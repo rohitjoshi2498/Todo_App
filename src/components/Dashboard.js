@@ -1,7 +1,6 @@
 import { React, useEffect } from "react";
 import { Card, Row } from "react-bootstrap";
-import { users } from "../users";
-import { _createCookie, _readCookie, _eraseCookie } from "./Network";
+import { _readCookie } from "./Network";
 import Navigation from "./Navbar";
 import TodoForm from "./Todo";
 

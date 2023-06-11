@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
-import { _createCookie, _readCookie, _eraseCookie } from "./Network";
+import { _createCookie, _readCookie } from "./Network";
 import { users, generateRandomCode } from "../users";
 import "../styles/Login.css";
 const Login = () => {
@@ -13,7 +13,7 @@ const Login = () => {
   }, []);
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username == users[0]["username"] && password == users[0]["password"]) {
+    if (username === users[0]["username"] && password === users[0]["password"]) {
       _createCookie("token", generateRandomCode(10), 1);
       window.location.replace("/dashboard/");
     } else {
